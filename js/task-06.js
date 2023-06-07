@@ -28,8 +28,10 @@ function blurBorderColor() {
   const inputValueLength = Number(inputRef.value.trim().length);
   if (inputDataLength === inputValueLength) {
     inputRef.classList.add("valid");
+    inputRef.classList.remove("invalid");
   } else {
     inputRef.classList.add("invalid");
+     inputRef.classList.remove("valid");
   }
 }
 

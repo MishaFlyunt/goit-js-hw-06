@@ -7,17 +7,17 @@ const inputRef = document.querySelector("#name-input");
 const outputRef = document.querySelector("#name-output");
 
 //1
-// const getInputValue = ({ currentTarget }) => {
-//   if (currentTarget.value.trim() !== "") {
-//     outputRef.textContent = currentTarget.value.trim();
-//   } else {
-//     outputRef.textContent = "Anonymous";
-//   }
-// };
+const getInputValue = ({ currentTarget }) => {
+  if (currentTarget.value.trim() !== "") {
+    outputRef.textContent = currentTarget.value.trim();
+  } else {
+    outputRef.textContent = "Anonymous";
+  }
+};
 
 //2
-const getInputValue = (event) => {
-  outputRef.textContent = event.currentTarget.value.trim();
-}
+// const getInputValue = (event) => {
+//   outputRef.textContent = event.currentTarget.value.trim();
+// }
 
 inputRef.addEventListener("input", getInputValue);

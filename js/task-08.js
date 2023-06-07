@@ -34,7 +34,6 @@ loginForm.addEventListener("submit", (event) => {
       password: password.value,
     };
     console.log(profile);
+    event.currentTarget.reset();
   }
-  event.currentTarget.reset();
 });
-
