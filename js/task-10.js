@@ -47,7 +47,7 @@ createBtnEl.addEventListener("click", () => {
   } else {
     createBoxes(inputNumberEl.value.trim());
   }
-  inputNumberEl.value = "";
+  // inputNumberEl.value = "";
 });
 
 destroyBtnEl.addEventListener("click", destroyBoxes);
@@ -62,7 +62,15 @@ function createBoxes(amount) {
   const boxesArr = [];
   for (let i = 0; i < amount; i += 1) {
     size += 10 * i;
-    const div = `<div class="item" style="display: block; margin-right: 30px; margin-bottom: 30px; background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px;"></div>`;
+    const div = `<div class="item" 
+    style="
+    display: block; 
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: ${getRandomHexColor()}; 
+    width: ${size}px; 
+    height: ${size}px;
+    "></div>`;
     boxesArr.push(div);
   }
   divBoxesEl.insertAdjacentHTML("beforeend", boxesArr.join(""));
